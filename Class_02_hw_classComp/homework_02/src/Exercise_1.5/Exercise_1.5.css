@@ -1,0 +1,18 @@
+.title_02{
+    margin-top: 40px;
+    margin-bottom: 75px;
+    text-align: center;
+   font-size: 40px;
+
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+}
+
+.nameDesc{
+    border: 1px solid black;
+   
+}

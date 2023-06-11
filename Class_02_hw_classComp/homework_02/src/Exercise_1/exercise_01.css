@@ -1,0 +1,18 @@
+.container_one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+hr{
+    margin: 0;
+    align-self: stretch;
+}
+
+.header_01{
+    background-color: lightskyblue;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
