@@ -12,12 +12,14 @@ class AcademyPrintComponent extends Component {
   constructor(props) {
     super(props);
 
-    // console.log(props);
+     console.log(props);
   }
 
   render() {
     return (
       <>
+      {/* the h3 and p elements will be rendered 5 times since this component 
+      will be called in a map loop. for each itteration the props will be different*/ }
         <h3>Academy name: {this.props.academy.name}</h3>
         <p>Description: {this.props.academy.description}</p>
       </>

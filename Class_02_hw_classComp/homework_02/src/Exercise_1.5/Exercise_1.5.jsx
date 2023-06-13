@@ -13,26 +13,32 @@ import "./Exercise_1.5.css";
 import AcademyPrintComponent from "./bonus";
 
 const Academies = (props) => {
-  return (
-    <div>
-      <h1>Exercise 1.5 </h1>
+    return (
+        <div>
+            <h1>Exercise 1.5 </h1>
 
-      <h2 className="title_02">{props.name}</h2>
+            <h2 className="title_02">{props.name}</h2>
 
-      <div className="mainContainer">
-        {props.academies.map((academy) => (
-          <div key={academy.description} className="nameDesc">
-            {/** WAY 1  */}
-            {/* <h3>Academy name: {academy.name}</h3>
-                            <p>Description: {academy.description}</p> */}
+            <div className="mainContainer">
 
-            {/** WAY 2   */}
-            <AcademyPrintComponent academy={academy} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+                {props.academies.map((academy) => (
+
+                    <div key={academy.description} className="nameDesc">
+
+                        {/** WAY 1  */}
+                        {/* <h3>Academy name: {academy.name}</h3>
+            <p>Description: {academy.description}</p> */}
+
+                        {/** WAY 2   */}
+                        {/* call the component and pass a prop wich is the object of -> 
+                        current itteration. The call of the component is in a map loop */ }
+                        <AcademyPrintComponent academy={academy} />
+
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Academies;
