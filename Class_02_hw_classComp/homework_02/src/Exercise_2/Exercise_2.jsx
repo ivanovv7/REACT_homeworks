@@ -61,12 +61,12 @@ class Counter extends React.Component {
 
     inputUser = (event) => {
         let value = event.target.value
-        //console.log(value) --> OK
+        //console.log(value) 
         //console.log(typeof value) -> PROBLEM type of input is STRING. Increment/decrement button  concatinates 1+"1" = 11 !
 
         //  *** ***SOLUTION *** *** :)
         this.setState({
-            counter: Number(value)
+            count: Number(value)
         })
     }
 
