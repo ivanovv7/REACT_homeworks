@@ -8,41 +8,31 @@
 //The academy name should be in "h3", and description in "p"
 
 // - NOTE: Academy object should look as {id: string, name: string, description: string}
-import './Exercise_1.5.css'
+
+import "./Exercise_1.5.css";
+import AcademyPrintComponent from "./bonus";
 
 const Academies = (props) => {
+  return (
+    <div>
+      <h1>Exercise 1.5 </h1>
 
+      <h2 className="title_02">{props.name}</h2>
 
+      <div className="mainContainer">
+        {props.academies.map((academy) => (
+          <div key={academy.description} className="nameDesc">
+            {/** WAY 1  */}
+            {/* <h3>Academy name: {academy.name}</h3>
+                            <p>Description: {academy.description}</p> */}
 
-    return (
+            {/** WAY 2   */}
+            <AcademyPrintComponent academy={academy} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-        <div>
-
-            <h1>Exercise 1.5 </h1>
-
-            <h2 className="title_02">
-                {props.name}
-            </h2>
-
-            <div className='mainContainer'>
-                {
-                    props.academies.map((academy) => (
-
-                        <div key={academy.description} className='nameDesc' >
-                            <h3>Academy name: {academy.name}</h3>
-                            <p>Description: {academy.description}</p>
-
-                        </div>
-
-                    ))
-                }
-
-
-            </div>
-
-        </div>
-    )
-
-}
-
-export default Academies
+export default Academies;

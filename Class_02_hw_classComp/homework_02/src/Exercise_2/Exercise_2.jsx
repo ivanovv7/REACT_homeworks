@@ -55,7 +55,7 @@ class Counter extends React.Component {
 
     reset = () => {
         this.setState({
-            counter: this.state.count = 0
+            count: this.state.count = 0
         })
     }
 
@@ -66,7 +66,7 @@ class Counter extends React.Component {
 
         //  *** ***SOLUTION *** *** :)
         this.setState({
-            count: Number(value)
+            counter: Number(value)
         })
     }
 
