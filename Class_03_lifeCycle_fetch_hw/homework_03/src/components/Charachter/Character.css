@@ -1,0 +1,22 @@
+.character-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin-top: 60px;
+    background-image:-webkit-radial-gradient()
+  }
+  
+  .character-name {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .character-info {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 3px;
+  }
+  
