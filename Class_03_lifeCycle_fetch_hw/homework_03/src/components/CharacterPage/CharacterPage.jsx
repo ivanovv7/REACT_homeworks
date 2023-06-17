@@ -24,6 +24,11 @@ class CharactersPage extends Component {
 
         this.state = {
             characters: [],
+            //NEWLY ADDED 2 State properties that will be manipulated in the finally block in the "handleFetch()" function ->
+            //the 2 new props have functionality: 1. firstly to add a className in the render block, and 2. secondly the props ->
+            //are manipulated in the finnaly block if the api call fails they are changed and thru CSS the animation and text are removed/preveted from a infinite loop.
+            classForH3LoadingText:"loading",
+            classForDivAnimation: "animation"
         };
 
         // console.log("constructor")
@@ -35,21 +40,53 @@ class CharactersPage extends Component {
     //  *** FUNCTIONS ***
     handleFetch = async () => {
         // API CALL AND PARSE RESULT FROM CALL
-        const response = await fetch(this.URL)
-        const result = await response.json()
 
-        // access the result deeper here so that the logic latter is easier accessed
-        const resultManipulated = await result.results
+       
+
+        try {
+            const response = await fetch(this.URL)
+
+            if (!response) {
+                throw new Error("Request failed", response.status)
+            }
+
+            const result = await response.json()
+
+             // access the result deeper here so that the logic latter is easier accessed
+            const resultManipulated = await result.results
+
+            // CHANGE STATE AFTER SUCCESFULL CALL
+            this.setState({
+                characters: [resultManipulated]
+            })
+        }
+
+        catch (error) {
+
+            console.log("Erorr occurred, failed API CALL")
+
+              // Since every change of the STATE TRIGGERS a RE-RENDER, these props will change the className of the ->>
+              // 2 elements that are the animation for loading and by using these "error given classNames" in CSS i remove the loading and prevent it to go in a LOOP forever :)
+            this.setState({
+                classForLoadingElement:"ErrorClassToStopLoading",
+                classForDivAnimation:"ErrorClassToStopAnimation"
+            })
+             
+        }
+
+      
+        // finally{
+        //     this.setState({
+        //         classForLoadingElement:"ErrorClassToStopLoading",
+        //         classForDivAnimation:"ErrorClassToStopAnimation"
+        //     })
+        // }
+
+        // console.log("TEST IF CODE RUNS AFTER ERROR") // OK ->>
 
         //  console.log(result) // OK
         //  console.log(result.results)
         //  //console.log(resultManipulated)
-
-        // CHANGE STATE AFTER SUCCESFULL CALL
-        this.setState({
-            characters: [resultManipulated]
-        })
-
         //  console.log(this.state.characters)
     }
 
@@ -73,7 +110,7 @@ class CharactersPage extends Component {
                 {/* *** *** ANIMATION *** *** */ }
                 {/**Use ternary operator for conditional rendering, before this there was a problem with .map function !!!! */}
                 {/**Since i return more than one element in ternary they need to be wrapped in a parrent element */}
-                {this.state.characters.length === 0 ? (<div className='container'> <h3 className='loading'>LOADING ....</h3>, <div className="animation"></div> </div>)
+                {this.state.characters.length === 0 ? (<div className='container'> <h3 className={this.state.classForLoadingElement}>LOADING ....</h3>  <div className={this.state.classForDivAnimation}></div> </div>)
                     :
                     this.state.characters[0].map((character) => (
                         // console.log(this.state.characters),
@@ -90,3 +127,9 @@ class CharactersPage extends Component {
 }
 
 export default CharactersPage;
+
+
+
+// ***  THIS IS THE OLD LINE number:106 ***
+
+// {this.state.characters.length === 0 ? (<div className='container'> <h3 className='loading'>LOADING ....</h3>, <div className="animation"></div> </div>)

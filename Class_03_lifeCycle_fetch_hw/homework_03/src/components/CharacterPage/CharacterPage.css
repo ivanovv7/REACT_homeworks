@@ -3,7 +3,7 @@
     100% { transform: rotate(360deg); }
   }
   
-  h3.loading {
+  .loading {
     text-align: center;
     animation: spinAnimation 2s linear infinite;
     display: inline-block;
@@ -28,3 +28,16 @@
     text-align: center;
     margin-top: 50px;
   }
+
+  
+
+  .ErrorClassToStopLoading{
+display: none;
+  }
+
+  .ErrorClassToStopAnimation{
+    display: none;
+  }
+
+
+
