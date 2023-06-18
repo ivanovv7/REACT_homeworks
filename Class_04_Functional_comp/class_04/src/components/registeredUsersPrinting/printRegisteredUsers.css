@@ -1,0 +1,30 @@
+.print-registered-users {
+    text-align: center;
+  }
+  
+  .print-registered-users h2 {
+    color: #3a5f7d;
+  }
+  
+  .print-registered-users .user-container {
+    margin-top: 20px;
+  }
+  
+  .print-registered-users .user-name {
+    color: #3a5f7d;
+  }
+  
+  .print-registered-users .remove-button {
+    background-color: #3a5f7d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .print-registered-users .remove-button:hover {
+    background-color: #2c4868;
+  }
+  
+  
