@@ -1,0 +1,43 @@
+.containerNav{
+
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(20,155,252);
+    color: antiquewhite;
+
+}
+
+h2{
+    
+ font-family: "Helvetica", Arial, sans-serif;
+      
+}
+
+.listOfNavLinks{
+
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    list-style:none;
+    text-transform: capitalize;
+    font-size: 24px;
+    
+    
+}
+
+li {
+
+    cursor:pointer;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a :hover{
+    background-color:rgb(166, 199, 223);
+}

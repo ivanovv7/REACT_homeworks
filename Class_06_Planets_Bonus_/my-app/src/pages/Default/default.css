@@ -1,0 +1,24 @@
+.star-wars-greeting {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .star-wars-text {
+    font-size: 36px;
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .star-wars-image {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .star-wars-description {
+    font-size: 36px;
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  

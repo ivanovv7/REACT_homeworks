@@ -1,0 +1,15 @@
+.charactersCard{
+
+    border: 2px solid rgb(20,155,252);;
+    width: 180px;
+    height: fit-content;
+    /* display: flex; 
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;  */
+    
+    
+    padding: 10px;
+    margin: 10px;
+
+}  
