@@ -1,0 +1,45 @@
+.navBar {
+    display: flex;
+
+    justify-content: flex-end;
+    /* margin: auto; */
+    background-color: rgb(134, 85, 73);
+    color: aliceblue;
+    align-items: center;
+}
+
+
+.navBar h1 {
+    margin-right: 150px;
+}
+
+.navBar h3 {
+    margin-right: 50px;
+}
+
+
+
+/* CSS WHEN ALL AVAILABLE TODOS ARE FINISHED */
+
+@keyframes celebrationAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.allTodosFinishedNav {
+
+    display: flex;
+    justify-content: space-around;
+    animation: celebrationAnimation 0.5s infinite;
+}

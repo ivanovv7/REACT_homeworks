@@ -1,0 +1,114 @@
+/* IsDone dynamic CLASSES --> TERNARY OPERATOR */
+
+.todoCardNotFinished{
+    /* border: 1px solid red; */
+    background-color:rgb(228,202,151);
+    width: 250px;
+    border-radius: 20px;
+    height: 180px;
+    margin: 5px;
+    color:#ad6b6b;
+    text-shadow: #ff3333;
+   
+}
+
+
+.todoCardFinished{
+    /* border: 1px solid red; */
+    background-color: #3ba83e8f;
+    border-radius: 20px;
+    width: 250px;
+    height: 180px;
+    margin: 5px;
+    color: rgb(104, 91, 91);
+   
+}
+
+/*  */
+
+.cardContainer{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap ;
+
+
+}
+
+
+
+
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-top: 50px;
+
+}
+
+
+.fancyInput {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+  }
+  
+  .fancyButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(134,85,73);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fancyButton:hover {
+    background-color: #3ba83e8f;
+  }
+
+
+
+.checkBoxCard {
+
+    width: 20px;
+    height: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 55px;
+  }
+  
+  
+  .deleteCardButton {
+    width: 24px;
+    height: 24px;
+    background-color: #ff3333b2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    margin-top: 55px;
+    margin-left: 190px;
+    
+  }
+  
+  .deleteCardButton:hover {
+    background-color: #cc0000;
+  }
+
+
+  h3{
+    text-align: center;
+  }
+  
+
+/* background-color: #242424; */
